@@ -76,3 +76,4 @@ const Table = (props: any) => (
   </svg>
 );
 export default Table;
+

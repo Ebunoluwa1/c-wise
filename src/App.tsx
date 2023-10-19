@@ -1,7 +1,10 @@
 import React from 'react';
+import Bar from './components/Bar';
+import Content from './components/Content';
 import Nav from './components/Nav';
 import TestimonialSection from './components/TestimonialSection';
-
+import QuoteSection from './components/QuoteSection.jsx';
+import Container from './components/Container';
 
 
 function App() {
@@ -9,7 +12,11 @@ function App() {
     <div className="">
       <Nav />
       <TestimonialSection />
-      {/* <Header /> */}
+      <Bar />
+
+      <Content />
+      <QuoteSection />
+      <Container />
     </div>
   );
 }

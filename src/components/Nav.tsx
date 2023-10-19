@@ -13,19 +13,19 @@ function Nav() {
           <div className="flex flex-row space-x-2">
             <div className="flex pr-4 flex-row items-center text-[#6c82a3] font-normal hover:text-black">
               <p className="pr-1"> Personal</p>
-              <a href='' className="" >
+              <a href='hi' className="" >
                 <HiOutlineChevronDown />
               </a>
             </div>
             <div className="text-[#6c82a3] pr-4 font-normal hover:text-black flex flex-row items-center ">
               <p className="pr-1">Business </p>
-              <a href=''>
+              <a href='hi'>
                 <HiOutlineChevronDown />
               </a>
             </div>
             <div className="text-[#6c82a3]  pr-4 font-normal hover:text-black flex flex-row items-center ">
               <p className="pr-1">Developer</p>
-              <a href='' >
+              <a href='hi' >
                 <HiOutlineChevronDown />
               </a>
             </div>
