@@ -5,7 +5,7 @@ import ButtonComponent from './atoms/button.atoms';
 const Container = () => {
 
   return (
-    <div className=' w-[100%] container'>
+    <div className=' w-[100%] container mb'>
       {/* w-[100%] flex flex-row justify-between   w-[55vw] h */}
         <div className=' p-10 flex flex-row justify-between'>
             <div className='w-[60vw] items-start px-32 pt-[40px] h-[70vh] bg-[right_bottom_2rem] bg-hero-pattern bg-cover bg-no-repeat
@@ -19,7 +19,7 @@ const Container = () => {
                 <div className='mt-[-8px] mb-8'>
                     <div className=" before:content-[''] before:h-[14%] before:w-[2px] 
                     before:bg-[#0066f5] before:absolute before:transition-[height] 
-                    before:ease-out before:duration-75   flex justify-start items-start ease-in-out duration-[0.5s] before:right-[44%] before:mt-24" >
+                    before:ease-out before:duration-75  flex justify-start items-start ease-in-out duration-[0.5s] before:right-[44%] before:mt-24" >
                        {/* before:h-[60px] before:w-[60px] before:left[-17px]*/}
                         <span className="relative text-[1.3rem] before:duration-[0.5s] before:animate-spin before:bg-rgba(162,227,252,.4)  before:absolute before:top[-18px]   before:h-[60px] before:w-[60px] before:left[-17px]  before:rounded-[100%] after:content-['01'] after:text-[#0066f5] after:text-[2rem] after:font-semibold after:right-[-44%]  after:absolute after:mr-10 after:mt-10 "></span>
                         <div className="mt-[18px] ">

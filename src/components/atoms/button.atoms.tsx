@@ -17,7 +17,7 @@ const ButtonComponent: React.FC<Props> = (
         alt,
         style, 
         onClick,
-    margin,
+        margin,
         padding,
         background,
         color

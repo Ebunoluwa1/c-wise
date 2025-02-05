@@ -5,6 +5,7 @@ module.exports = {
   theme: {
     extend: {
        backgroundImage: {
+            'security-pattern': "url('https://cowrywise.com/images/illos/security.svg')",
            'hero-pattern': "url('https://cowrywise.com/images/patterns/home/home-device-section.svg')",
            'phone-image': "url('./src/Assets/phone.png')",
        },
