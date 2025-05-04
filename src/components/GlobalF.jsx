@@ -48,7 +48,7 @@ const GlobalF = () => {
             </div>
             {/* footer cta */}
             <div className='rounded-xl bg-[#0066f5] mb-[40px] shadow-[0px_59px_51px_-34px_rgba(0,103,245,.3)]  py-[80px] px-[10px] justify-center items-center flex flex-row flex-wrap w-full flex-auto'>
-                <div className='sm:max-w-[41.67%] sm:p-1 w-full '>
+                <div className='sm:max-w-[41.67%] sm:p-1 w-full'>
                     <h3 className='leading-normal -tracking-wide text-[2.9rem] text-white font-bold'>Sign up for free.<br />Start investing today.</h3>
                 </div>
                 
@@ -65,36 +65,50 @@ const GlobalF = () => {
                      
                     </form>
                 </div>
+
             </div>
+         
           
+           <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6'>
            {/* footer menu */}
-           <div className='w-full flex flex-row flex-wrap mt-[100px] mb-[40px]'>
+           {footer.map((section, index) => (
+         <div key={index} className='w-full  flex  mt-[100px] mb-[40px]'>
                   
-              <div className='w-full sm:max-w-[25%] sm:basis-[25%] sm:p-1'>
+              <div className='w-full sm:p-1'>
              
-                 <h4 className="footer__menu-header text-[1.5rem] mb-[30px] text-[#082552] leading-5 font-semibold"> {footer[0]}</h4>
+                 <h4 className=" text-[1.5rem] mb-[30px] text-[#082552] leading-5 font-semibold"> {section.heading}</h4>
              
                  <ul className='p-0 list-none'>
-                    <li className='leading-[1.7] tracking-[-.2px] mt-[8px] list-none text-[#082552] font-normal '>
-                   <a href="https://cowrywise.com/about" className='text-[rgba(8,37,82,.6)] font-medium 
-                    break-words hover:text-[#0066f5] duration-75 ease-linear text-[1rem] bg-transparent cursor-pointer  '>{footer[0].list}</a>
+                  {section.list.map((item, i) => (
+                           <li key={i} className='leading-[1.7] tracking-[-.2px] mt-[8px] list-none text-[#082552] font-normal'>
+                               {item.includes("↗") ? (
+                    <a  href="https://cowrywise.com/about" className='text-[rgba(8,37,82,.6)] font-medium 
+                    break-words hover:text-[#0066f5] duration-75 ease-linear text-[1rem] bg-transparent cursor-pointer'>
+                      {item}
+                    </a>
+                  ) : (
+                    item
+                  )}
+                   
                    </li>
+                  ))}
+                    
                  </ul>
                   </div>
-                  <div className='w-full sm:max-w-[25%] sm:basis-[25%] sm:p-1'>
-                     <h4 className="footer__menu-header text-[1.5rem] mb-[30px] text-[#082552] leading-5 font-semibold">{footer[1]}</h4>
+                  {/* <div className='w-full sm:max-w-[25%] sm:basis-[25%] sm:p-1'>
+                     <h4 className=" text-[1.5rem] mb-[30px] text-[#082552] leading-5 font-semibold">{footer[1]}</h4>
                {/* ))} */}
                  {/* {list.map (( item, index) => (  */}
-                 <ul className='p-0 list-none'>
+                 {/* <ul className='p-0 list-none'>
                     <li className='leading-[1.7] tracking-[-.2px] mt-[8px] list-none text-[#082552] font-normal '>
                     <a href="https://cowrywise.com/about" className='text-[rgba(8,37,82,.6)] font-medium 
                     break-words hover:text-[#0066f5] duration-75 ease-linear text-[1rem] bg-transparent cursor-pointer  '>{footer[1].list}</a>
                      
                  
                     </li>
-                  </ul>
+                  </ul> */}
                 
-                  </div>
+                  {/* </div>  */}
                     {/* <li className='leading-[1.7] tracking-[-.2px] mt-[8px] list-none text-[#082552] font-normal '>
                     <a href="https://cowrywise.com/press" className='text-[rgba(8,37,82,.6)] font-medium 
                     break-words hover:text-[#0066f5] duration-75 ease-linear text-[1rem] bg-transparent cursor-pointer  ' >Press</a>
@@ -123,7 +137,7 @@ const GlobalF = () => {
               </div>
               {/* b */}
               {/* <div className='w-full sm:max-w-[25%] sm:basis-[25%] sm:p-1'>
-                 <h4 className="footer__menu-header text-[1.5rem] mb-[30px] text-[#082552] leading-5 font-semibold">Product</h4>
+                 <h4 className=" text-[1.5rem] mb-[30px] text-[#082552] leading-5 font-semibold">Product</h4>
                  <ul className='p-0 list-none'>
                     <li className='leading-[1.7] tracking-[-.2px] mt-[8px] list-none text-[#082552] font-normal '>
                     <a href="https://cowrywise.com/about" className='text-[rgba(8,37,82,.6)] font-medium 
@@ -161,7 +175,7 @@ const GlobalF = () => {
               </div>
               {/* c */}
               {/* <div className='w-full sm:max-w-[25%] sm:basis-[25%] sm:p-1'>
-                 <h4 className="footer__menu-header text-[1.5rem] mb-[30px] text-[#082552] leading-5 font-semibold">Resources</h4>
+                 <h4 className=" text-[1.5rem] mb-[30px] text-[#082552] leading-5 font-semibold">Resources</h4>
                  <ul className='p-0 list-none'>
                     <li className='leading-[1.7] tracking-[-.2px] mt-[8px] list-none text-[#082552] font-normal '>
                     <a href="https://cowrywise.com/about" className='text-[rgba(8,37,82,.6)] font-medium 
@@ -221,6 +235,9 @@ const GlobalF = () => {
               {/* </div>  */}
                   
            </div>
+           ))}
+          </div>
+
              {/* socials */}
              <div className='w-full flex flex-row flex-wrap mt-[50px] mb-[30px]'>
                <div className='sm:max-w-[58.33%] sm:p-1 w-full '>

@@ -93,13 +93,13 @@ const TestimonialSection = (Props) => {
   const thumbnails = [thumbnail1, thumbnail2, thumbnail3];
  const {quote,username,author,backgroundColor, poster} = heroData[index] ;
   return (
-    <div className="mr-6 mb-6 mt-2 grid lg:grid-cols-2 gap-4">
+    <div className="mr-6 mb-6 mt-2 grid lg:grid-cols-2 gap-10">
       {/* testimonial container  */}
       
       {/* testimonial left1 */}
-      <AnimatePresence mode='wait'>
+      <AnimatePresence mode='wait' >
             <motion.div
-              className="bg-[rgb(255,236,219)]  h-[650px] w-[70%] -left-[20%] top-[5%] p-10 z-10 "
+              className="hidden md:block bg-[rgb(255,236,219)]  h-[650px] w-[70%] -left-[20%] top-[5%] p-10 z-10 "
               initial={{ x: "-100vh" }}
               key={`bg__${index}`}
               animate={{ x: ["-50vh", "0vh"] }}
@@ -125,7 +125,7 @@ const TestimonialSection = (Props) => {
             </div>
 
             {/* testimonial image and video */}
-            <div>
+            <div >
              
               {!video[index] ? (
                 <motion.figure
@@ -154,7 +154,7 @@ const TestimonialSection = (Props) => {
                      <img src={poster} alt="wura poster"  className="z-10 absolute left-[-5%] h-[500px] w-[450px] max-w-xl flex-shrink ml-14" />
                 </motion.figure>
               ) : (
-               <div className="absolute left-[-5%] z-10  w-[450px] flex-shrink max-w-xl  ml-14 ">
+               <div className=" absolute left-[-5%] z-10  w-[450px] flex-shrink max-w-xl  ml-14 ">
                 <motion.video
                   autoPlay
                   playsInline
@@ -189,8 +189,8 @@ const TestimonialSection = (Props) => {
 
             {/* {testimonial thumbnail} */}
           <motion.div
-                className="ml-14 flex flex-row absolute
-                 z-30 -bottom-32"
+                className=" ml-14 flex flex-row absolute
+                 z-30 -bottom-24 lg:-bottom-18 xl:-bottom-32 "
                 variants={thumbnailContainer}
                 initial={"hidden"}
                 whileInView={"show"}
@@ -203,7 +203,7 @@ const TestimonialSection = (Props) => {
                  key={imageIndex}
                  alt={`thumbnail ${imageIndex + 1}`}
                  onClick={() => handleImageChange(imageIndex)}
-                 className= ' pr-4 hover:grayscale hover:brightness-50 active:contrast-125 scale-100 transition-all hover:scale-125 hover:!important '
+                 className= 'hidden md:block pr-4 hover:grayscale hover:brightness-50 active:contrast-125 scale-100 transition-all hover:scale-125 hover:!important '
                />
             ))}
           </motion.div>
@@ -215,8 +215,8 @@ const TestimonialSection = (Props) => {
       {/* testimonial right */}
 
       <div>
-        <div className="">
-          <p className=" mt-28 text-[8rem] text-[#082552] -tracking-[7.5px] leading-none font-[500] whitespace-normal w-full ">
+        <div className="mx-4">
+          <p className=" mt-10 md:mt-48 gap-4 text-[8rem] text-[#082552] -tracking-[7.5px] leading-none font-[500] whitespace-normal w-full ">
             Put your money to work{" "}
           </p>
           <h6 className="text-[3rem] mt-4 mb-[0.5em] text-[#082552] font-[400] whitespace-normal  -tracking-[2px] ">
@@ -225,7 +225,7 @@ const TestimonialSection = (Props) => {
           </h6>
 
           <div>
-            <div className="w-[80%} flex flex-row items-center text-center p-2 space-x-4">
+            <div className="w-[80%} flex flex-col  gap-4 md:flex-row lg:flex-row xl:flex-row items-center text-center p-2 space-x-4 ">
               <InputComponent width="300px" placeholder="Your Email..." />
               <ButtonComponent alt children="Start Investing" />
             </div>

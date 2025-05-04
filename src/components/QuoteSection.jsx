@@ -16,7 +16,7 @@ const Carousel = [
                <div className='text-[#0066f5] space-x-8 w-[20vw]'>
                     <a href="https://my.cowrywise.com/signup ">
                         <p className='font-bold text-[2rem] '>“</p>
-                        <h4 className='text-[28px] font-semibold'> Automate and build my savings</h4>
+                        <h4 className='md:text-[28px] text-base font-semibold'> Automate and build my savings</h4>
                     </a>
                 </div>
                </div>
@@ -27,7 +27,7 @@ const Carousel = [
                 <div className='text-[#0066f5]  space-x-8 w-[20vw]'>
                     <a href="https://my.cowrywise.com/signup">
                         <p className='font-bold text-[2rem] '>“</p>
-                        <h4 className=' text-[28px] font-semibold '>Diversified long-term investing</h4>
+                        <h4 className=' md:text-[28px] text-base  '>Diversified long-term investing</h4>
                     </a>
                 </div>
             </div>
@@ -39,7 +39,7 @@ const Carousel = [
                 <div className='text-[#0066f5] space-x-8 w-[20vw]'>
                     <a href="https://my.cowrywise.com/signup">
                         <p className='font-bold text-[2rem] '>“</p>
-                        <h4 className='font-semibold  text-[28px]'>Get better returns on my money</h4>
+                        <h4 className='font-semibold   text-base  md:text-[28px]'>Get better returns on my money</h4>
                     </a>
                 </div>
             </div>
@@ -51,7 +51,7 @@ const Carousel = [
                 <div className='text-[#0066f5]  space-x-8 w-[20vw]'>
                     <a href="https://my.cowrywise.com/signup">
                         <p className='font-bold text-[2rem]'>“</p>
-                        <h4 className='font-semibold text-[28px]'>Invest my business’ cash</h4>
+                        <h4 className='font-semibold  text-base md:text-[28px]'>Invest my business’ cash</h4>
                     </a>
                 </div>
             </div>
@@ -63,7 +63,7 @@ const Carousel = [
                 <div className='text-[#0066f5] space-x-8 w-[20vw]'>
                     <a href="https://my.cowrywise.com/signup">
                         <p className='font-bold text-[2rem] '>“</p>
-                        <h4 className='font-semibold text-[28px]'>Invest in mutual funds easily</h4>
+                        <h4 className='font-semibold  text-base md:text-[28px]'>Invest in mutual funds easily</h4>
                     </a>
                 </div>
             </div>
@@ -75,7 +75,7 @@ const Carousel = [
                 <div className='text-[#0066f5] space-x-8 w-[20vw]'>
                     <a href="https://my.cowrywise.com/signup">
                         <p className='font-bold text-[2rem]'>“</p>
-                        <h4 className='font-semibold text-[28px]'>Invest with very low fees </h4>
+                        <h4 className='font-semibold  text-base  md:text-[28px]'>Invest with very low fees </h4>
                     </a>
                 </div>
 
@@ -93,8 +93,8 @@ const Carousel = [
             </div> 
 
             <ScrollCarousel autoplay autoplaySpeed={8} speed={8} onReady={() => console.log('I am ready')}>
-              {Carousel.map((item) => (
-                <div key={Number}>
+              {Carousel.map((item,index) => (
+                <div key={index}>
                     {item}
                 </div>
               ))}

@@ -5,15 +5,8 @@ import React, { useState } from 'react'
 import { RangeSlider } from './atoms/rangeSlider.atom';
 import ButtonComponent from './atoms/button.atoms';
 
-interface Props {
-  selected?: boolean | undefined;
-  style: React.CSSProperties | undefined;
-  value: any;
-   Output: HTMLElement | null
-  Slider: any;
-}
 
-const Content = (Props:any) => {
+const Content = () => {
    
     const [invest, setInvest] = useState('onMouseMove')
 
@@ -92,7 +85,7 @@ const Content = (Props:any) => {
                 <p className='text-[#0066f5] text-[14px]  px-4 py-2 font-normal bg-[#e1f6ff]'> ₦33,690,249 earned in returns on cowrywise</p>
                 <p className='text-[#6c82a3] items-center text-center text-[14px] px-4 py-2'> *In a bank, you'd earn ₦1,370, 592</p>
       
-              <p className='text-[#6c82a3] items-center w-[800px] text-center mt-7'>Calculations are based on the average performance of conservative mutual funds on Cowrywise from 2019. Calculation excludes processing fees.</p>
+              <p className='text-[#6c82a3] whitespace-normal  items-center w-full text-center mt-7 '>Calculations are based on the average performance of conservative mutual funds on Cowrywise from 2019. Calculation excludes processing fees.</p>
              </div>
      
    
@@ -115,7 +108,7 @@ const Content = (Props:any) => {
          </div> ) */}
 
             {/* invest overlay */}
-                <div className="items-center text-center flex flex-col z-10 w-[95%] mt-2 absolute left-0 bottom-[-5] bg-[hsla(0,0%,100%,.7)] ease-in-out transition-opacity " >
+                <div className="items-center text-center w-full min-h-[35%] flex flex-col z-10 mt-2 absolute left-0 bottom-[-5] bg-[hsla(0,0%,100%,.7)] ease-in-out transition-opacity " >
                     {/* <span className='items-center text-center flex flex-col z-30 w-full absolute bg-[hsla(0,0%,100%,.7)] ease-in-out transition-opacity'> */}
                       <h3 className='text-[#082520] text-4xl font-bold text-center m-4'>Ready to start investing?</h3>
                     <a href="https://my.cowrywise.com/signup">

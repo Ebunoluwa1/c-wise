@@ -88,7 +88,7 @@ const TestimonialSection = (Props) => {
   const thumbnails = [thumbnail1, thumbnail2, thumbnail3];
 
   return (
-    <div className="mr-6 mb-6 mt-2 grid lg:grid-cols-2 gap-4">
+    <div className="mr-6 mb-6 mt-2 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-4">
       {/* testimonial container  */}
       
       {/* testimonial left1 */}
@@ -189,7 +189,7 @@ const TestimonialSection = (Props) => {
                       type="video/mp4"
                     />
                   </video> */}
-                  <img src={Wura} alt="wura poster"  className="z-10 absolute top-[8%] left-[5%] h-[500px] w-[100%] max-w-xl flex-shrink ml-14" />
+                  <img src={Wura} alt="wura poster"  className="z-10 absolute top-[8%] left-[5%] h-[300px] lg:h-[500px] w-[100%] max-w-xl flex-shrink ml-14" />
                 </motion.figure>
               ) : (
                <div className="absolute top-[8%] left-[5%] z-10  width-[100%] flex-shrink-0 max-w-xl h-[400px] ">

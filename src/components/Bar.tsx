@@ -4,8 +4,9 @@ import ButtonComponent from './atoms/button.atoms';
 
 const Bar = () => {
     return (
-      <div className="ml-6 my-6 mt-40 flex flex-row items-center justify-between flex-wrap  ">
+      <div className="md:ml-6 my-6 mt-40 flex flex-col md:flex-row items-center justify-between flex-wrap  px-4">
         {/* bar container  */}
+
         {/* bar left */}
         <div
           style={{
@@ -13,16 +14,17 @@ const Bar = () => {
             transform: " translate(0px, 0px)",
             visibility: "inherit",
           }}
-          className="flex-[50%] flex-wrap flex-col top-40 "
+          className='w-full md:w-1/2 mb-10 md:mb-0'
+          // className=" flex-[50%] flex-wrap flex-col top-40 "
         >
-          <h2 className=" text-[#082552] font-semibold leading-none mb-1 -tracking-[7.5px] text-[6rem]">
+          <h2 className=" text-[#082552] font-semibold leading-none mb-1 tracking-tighter text-[3rem] sm:text-[4rem] md:text-[6rem] text-center md:text-left">
             {" "}
             Get a <span className=" italic font-[200] ">little</span>
             &nbsp;
-            <br /> <span className="flex-wrap  ">richer each day</span>
+            <br /> <span className="block md:inline ">richer each day</span>
           </h2>
           <h5
-            className="mb-20 -tracking-[1.8px] leading-[1.2] mt-8 text-[2rem] font-[500] text-[#082552] "
+            className="mb-20 tracking-tight text-center md:text-left mt-6 text-[1.2rem]  sm:text-[1.5rem] md:text-[2rem]   font-medium text-[#082552] "
             style={{
               opacity: " 1",
               transform: " translate(0px, 0px)",
@@ -31,14 +33,16 @@ const Bar = () => {
           >
             One small step today, a giant leap for tomorrow.
           </h5>
-
+          {/*  */}
+               <a href="https://cwry.se/app" className=" ">
+            <ButtonComponent alt children="Start your financial journey" />{" "}
+          </a>
           {/*
            */}
         </div>
 
         {/* bar right ml-6 my-6  grid grid-cols-2 gap-8*/}
-        {/* className="relative w-[50%]  justify-end float-right" */}
-        <div className="relative flex-[50%] h-full overflow-hidden">
+         <div className="hidden relative flex-[50%] h-full overflow-hidden">
           <div className="relative top-20 h-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -169,116 +173,115 @@ const Bar = () => {
               </g>
             </svg>
           </div>
-        </div>
+          </div>
+        
 
         {/* {each box} */}
-        <div className="flex flex-row items-center justify-between ">
-          <a href="https://cwry.se/app" className="relative l -top-48 ">
-            <ButtonComponent alt children="Start your financial journey" />{" "}
-          </a>
-
-          {/*  */}
-
-          <main className="relative left-40 mb-18 bottom-60">
-            <div
-              className=" absolute z-20 left-1/3"
-              style={{
-                opacity: 1,
-                visibility: "inherit",
-                transform: "translate(0px, 0px)",
-              }}
-            >
+          <div className="hidden absolute -mb-[698px] -bottom-84 ml-48 left-46">
               {/*  */}
-              <div className="flex relative w-full z-1 mr-14 -right-36 space-x-4 items-start flex-row">
-                <div className=" flex flex-col -bottom-40 rounded-xl bg-[white] w-72 px-[16px] py-[24px] border border-solid border-[rgba(8,37,82,.07)] shadow-[1px_3px_4px_rgba(8,37,82,.04)]">
-                  <h6 className="font-semibold text-[#082552] ">
-                    Build your savings
-                  </h6>
-                  <p
-                    className="text-[#6c82a3] font-[400] mt-[8px] 
-              text-[.8rem]  "
+
+                <main className="relative mr-48 left-40 mb-18 bottom-60">
+                    <div
+                      className=" absolute z-20 left-1/3"
+                      style={{
+                        opacity: 1,
+                        visibility: "inherit",
+                        transform: "translate(0px, 0px)",
+                      }}
+                    >
+                      {/*  */}
+                      <div className="flex relative w-full z-1 mr-14 -right-36 space-x-4 items-start flex-row">
+                        <div className=" flex flex-col -bottom-40 rounded-xl bg-[white] w-72 px-[16px] py-[24px] border border-solid border-[rgba(8,37,82,.07)] shadow-[1px_3px_4px_rgba(8,37,82,.04)]">
+                          <h6 className="font-semibold text-[#082552] ">
+                            Build your savings
+                          </h6>
+                          <p
+                            className="text-[#6c82a3] font-[400] mt-[8px] 
+                      text-[.8rem]  "
+                          >
+                            Consistently automate your savings while setting realistic
+                            goals.
+                          </p>
+                        </div>
+                        <div className="rounded-full text-center items-center bg-white text-[#082552] h-[40px] w-[40px] text-[1.6rem]">
+                          1
+                        </div>
+                      </div>
+                    </div>
+                </main>
+            
+
+                <main className="relative ml-[494px] right-82 bottom-24">
+                  {" "}
+                  <div
+                    className="absolute z-20 bottom-1/3 -right-18 "
+                    style={{
+                      opacity: 1,
+                      visibility: "inherit",
+                      transform: "translate(0px, 0px)",
+                    }}
                   >
-                    Consistently automate your savings while setting realistic
-                    goals.
-                  </p>
-                </div>
-                <div className="rounded-full text-center items-center bg-white text-[#082552] h-[40px] w-[40px] text-[1.6rem]">
-                  1
-                </div>
-              </div>
-            </div>
-          </main>
-        </div>
+                    <div className="flex mt-4 relative justify-between -top-48 right-6 space-x-4 items-start flex-row">
+                      <div
+                        className=" flex flex-col rounded-xl
+                    bg-white bottom-3 w-72 px-[16px] py-[24px] border border-solid border-[rgba(8,37,82,.07)] shadow-[1px_3px_4px_rgba(8,37,82,.04)]"
+                      >
+                        <h6 className="font-semibold text-[#082552] ">
+                          Invest deliberately
+                        </h6>
+                        <p
+                          className="text-[#6c82a3] font-[400] mt-[8px] 
+                      text-[.8rem]  "
+                        >
+                          Invest in our diverse range of assets that grow in value over
+                          time.
+                        </p>
+                      </div>
+                      <div
+                        className="rounded-full text-center items-center 
+                    bg-white text-[#082552] h-[40px] w-[40px] text-[1.6rem]"
+                      >
+                        2
+                      </div>
+                    </div>
+                  </div>
+                </main>
 
-        <main className="relative right-82 bottom-24">
-          {" "}
-          <div
-            className="absolute z-20 bottom-1/3 -right-18 "
-            style={{
-              opacity: 1,
-              visibility: "inherit",
-              transform: "translate(0px, 0px)",
-            }}
-          >
-            <div className="flex mt-4 relative justify-between -top-48 right-6 space-x-4 items-start flex-row">
-              <div
-                className=" flex flex-col rounded-xl
-            bg-white bottom-3 w-72 px-[16px] py-[24px] border border-solid border-[rgba(8,37,82,.07)] shadow-[1px_3px_4px_rgba(8,37,82,.04)]"
-              >
-                <h6 className="font-semibold text-[#082552] ">
-                  Invest deliberately
-                </h6>
-                <p
-                  className="text-[#6c82a3] font-[400] mt-[8px] 
-              text-[.8rem]  "
-                >
-                  Invest in our diverse range of assets that grow in value over
-                  time.
-                </p>
-              </div>
-              <div
-                className="rounded-full text-center items-center 
-            bg-white text-[#082552] h-[40px] w-[40px] text-[1.6rem]"
-              >
-                2
-              </div>
-            </div>
-          </div>
-        </main>
-
-        <main className="relative bottom-96 right-50">
-          <div className="absolute z-20 right-16 mr-4 bottom-3 ">
-            <div
-              className="flex relative justify-between bottom-12 left-16 space-x-4 items-start flex-row"
-              style={{
-                opacity: 1,
-                visibility: "inherit",
-                transform: "translate(0px, 0px)",
-              }}
-            >
-              <div
-                className="flex -top-68 right-8 flex-col rounded-xl
-            bg-white bottom-3 w-72 px-[16px] py-[24px] border border-solid border-[rgba(8,37,82,.07)] shadow-[1px_3px_4px_rgba(8,37,82,.04)]"
-              >
-                <h6 className="font-semibold text-[#082552] ">Stay rich ✨</h6>
-                <p
-                  className="text-[#6c82a3] font-[400] mt-[8px] 
-              text-[.8rem]  "
-                >
-                  Protect your wealth by managing risk, seeking advice and
-                  making smart financial decisions.
-                </p>
-              </div>
-              {/* <div
-                className="rounded-full text-center items-center 
-            bg-white text-[#082552] h-[40px] w-[40px] text-[1.6rem]"
-              >
-                3
-              </div> */}
-            </div>
-          </div>
-        </main>
+                <main className="relative -mr-[454px] bottom-96 right-50">
+                  <div className="absolute z-20 right-16 mr-4 bottom-3 ">
+                    <div
+                      className="flex relative justify-between bottom-12 left-16 space-x-4 items-start flex-row"
+                      style={{
+                        opacity: 1,
+                        visibility: "inherit",
+                        transform: "translate(0px, 0px)",
+                      }}
+                    >
+                      <div
+                        className="flex -top-68 right-8 flex-col rounded-xl
+                    bg-white bottom-3 w-72 px-[16px] py-[24px] border border-solid border-[rgba(8,37,82,.07)] shadow-[1px_3px_4px_rgba(8,37,82,.04)]"
+                      >
+                        <h6 className="font-semibold text-[#082552] ">Stay rich ✨</h6>
+                        <p
+                          className="text-[#6c82a3] font-[400] mt-[8px] 
+                      text-[.8rem]  "
+                        >
+                          Protect your wealth by managing risk, seeking advice and
+                          making smart financial decisions.
+                        </p>
+                      </div>
+                      {/* <div
+                        className="rounded-full text-center items-center 
+                    bg-white text-[#082552] h-[40px] w-[40px] text-[1.6rem]"
+                      >
+                        3
+                      </div> */}
+                    </div>
+                  </div>
+                </main>
+          </div> 
         {/*  */}
+
       </div>
     );
 }
